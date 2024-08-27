@@ -33,8 +33,8 @@ Ensure you have the following installed on your system:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/government-transparency-ai.git
-   cd government-transparency-ai
+   git clone https://github.com/hubert77500/data-Mapainversiones.git
+   cd chatbots/bid-hackaton-ps1
 
 ### Create and activate a virtual environment:
 
@@ -74,6 +74,12 @@ To run de base .db files first time run:
 cd ingest/data
 python3 generate_tables.py
 python3 generate_tables_paraguay.py
+```
+
+Or you can get the base prepared .db of all countries by running:
+```bash
+cd ingest/data
+python3 get_base_db_files.py
 ```
 
 ### Running the Streamlit App
