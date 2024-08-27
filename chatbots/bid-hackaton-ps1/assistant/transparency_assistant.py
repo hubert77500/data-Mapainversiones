@@ -81,9 +81,10 @@ class TransparencyAssistant:
 
         Generate a JSON object with two fields, no markup in the response: 1. `sql_query` - a SQL query that answers 
         the user's question, or an empty string if the question is out of scope. 2. `explanation` - a simple and 
-        non-technical explanation of the data in the query results, specifically explaining what the data represents 
-        and how it answers the user's question, in the same language as the user's question. Ensure that numerical 
-        values are clearly formatted and that currency names are included where relevant."""
+        non-technical explanation of the data in the query results, don't mention it is a query, just in own words, 
+        specifically explaining what the data represents and how it answers the user's question, in the same language 
+        as the user's question. Ensure that numerical values are clearly formatted and that currency names are 
+        included where relevant."""
         formatted_prompt = prompt_template.format(
             table_info=self.table_info, context=self.context, prompt=user_input
         )

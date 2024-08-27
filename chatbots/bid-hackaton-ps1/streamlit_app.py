@@ -34,10 +34,12 @@ if selected_country != "Select Country":
     paths = country_paths[selected_country]
     db_path = paths["db_path"]
     descriptor_path = paths["descriptor_path"]
+    openai_api_key = os.getenv('OPENAI_API_KEY')  # Retrieve the OpenAI API key from environment variables
 
-    # Initialize the TransparencyAssistant
-    assistant = TransparencyAssistant(db_path, descriptor_path)
+    # Initialize the TransparencyAssistant with the OpenAI API key
+    assistant = TransparencyAssistant(db_path, descriptor_path, openai_api_key)
 
+    # Handling chat input
     if prompt := st.chat_input("Type your message and press Enter"):
         st.session_state.chat_history.append({"role": "user", "message": prompt})
         result, explanation = assistant.chat(prompt)

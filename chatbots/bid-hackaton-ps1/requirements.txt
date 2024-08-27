@@ -11,3 +11,4 @@ fastapi
 uvicorn
 pydantic
 gdown
+google-cloud-translate

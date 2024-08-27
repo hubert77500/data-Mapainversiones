@@ -69,18 +69,21 @@ cp .env.example .env
 ```
 
 ### Generate the Databases
-To run de base .db files first time run:
+
+You can get the base prepared .db of all countries by running:
+```bash
+cd ingest/data
+python3 get_base_db_files.py
+```
+
+Or you can run de base .db files first time run from the urls provided in the problem statement:
 ```bash
 cd ingest/data
 python3 generate_tables.py
 python3 generate_tables_paraguay.py
 ```
 
-Or you can get the base prepared .db of all countries by running:
-```bash
-cd ingest/data
-python3 get_base_db_files.py
-```
+
 
 ### Running the Streamlit App
 The Streamlit app provides an interactive UI for querying government data.
